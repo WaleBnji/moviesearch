@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background: #0f0f0f;
+}
+
+
+@layer components {
+  .wrapper{
+    padding: 2rem;
+  }
+
+  .fc{
+    display: flex;
+    align-items: center;
+  }
+
+  .fcc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fbc{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
