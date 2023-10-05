@@ -43,8 +43,8 @@ function App() {
     <>
     <div className='wrapper'>
       <h1 className='text-center text-white'>MovieSearch</h1>
-      <div className='fbc border rounded-[15px] px-2 py-1 m-4 bg-white'>
-        <input type="search"  placeholder='Search' className='w-full focus:outline-none' name='search' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+      <div className='fbc border rounded-[15px] px-2 py-1 m-4 bg-white md:w-[40%] mx-auto'>
+        <input type="search"  placeholder='Search' className='w-full focus:outline-none ' name='search' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
         <AiOutlineSearch onClick={() => {
           searchMovie(searchTerm)
         }} />
@@ -52,7 +52,7 @@ function App() {
       </div>
 
       {movies?.length > 0 ? (
-        <div className='grid gap-12  lg:grid-cols-5 mt-10'>
+        <div className='container'>
           {movies?.map((movie) => {
            return  <Card movie={movie} key={movie.imdbID}/>
 
